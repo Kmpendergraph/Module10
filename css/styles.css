@@ -1,0 +1,380 @@
+/* Colors 
+- Deep Purple: #22223b
+- Light Purple: #4a4e69
+- Neutral Purple: #9a8c98
+- Tan: #c9ada7
+- Off White: #f2e9e4
+*/
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
+body {
+  /* background is white by default but added for clarity */
+  background: white;
+  width: 100%;
+}
+
+/* Portfolio Header Styling */
+
+.portfoliohead {
+  font-family: "Ms Madi", cursive;
+  font-style: normal;
+  color: #22223b;
+  font-size: 8rem;
+  padding-left: 20px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+
+/* Intro Paragraph Styling */
+
+.intro {
+  text-align: center;
+  padding-top: 40px;
+}
+
+/* Menu Styling */
+
+.hamburger, .close {
+  border: none;
+  cursor: pointer;
+  /* position absolute position the icons relative to the body because they have no position relative parents*/
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+}
+
+.hamburger {
+  background: white;
+}
+
+.close {
+  background: #22223b;
+}
+
+.hamburger img, .close img {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar {
+  position: absolute;
+  /* a higher z-index put navbar above hamburger */
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  /* basic menu styling*/
+  list-style: none;
+  background: #22223b;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  /* animate slide up/down */
+  transform: translateY(-100%);
+  transition: transform 0.2s ease;
+}
+
+/* :target is called when its anchor id #navbar is called by clicking on the hamburger which has href="#navbar" */
+
+.navbar:target {
+  /* show navbar */
+  transform: translateY(0);
+}
+
+li a {
+  display: block;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  /* remove default underline and add our own with padding and border bottom */
+  text-decoration: none;
+  border-bottom: 1px solid black;
+  padding-bottom: 0.5rem;
+}
+
+li a:hover, li a:focus {
+  /* show border bottom */
+  border-bottom: 1px solid white;
+}
+
+/* Grid Styling */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding-bottom: 30px;
+}
+
+.logos {
+  margin-left: 20%;
+}
+
+.socials {
+  margin-left: 20%;
+}
+
+.illu {
+  margin-left: 20%;
+}
+
+.text {
+  margin-right: 20%;
+}
+
+.text p {
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: regular;
+  font-style: normal;
+  font-size: 1rem;
+  border: hidden;
+  background-color: #e3d1cc;
+  padding-top: 13px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #22223b;
+}
+
+.text h3 {
+  padding-bottom: 10px;
+  color: #22223b;
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1.3rem;
+}
+
+.grid-container .socials img {
+  padding-top: 60px;
+}
+
+.grid-container .text {
+  padding-top: 80px;
+}
+
+.grid-container .logos img {
+  padding-top: 60px;
+}
+
+.grid-container .illu img {
+  padding-top: 60px;
+}
+
+.grid-container-photo {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-top: 25px;
+  padding-bottom: 20px;
+  margin-left: 13%;
+  margin-right: 13%;
+  padding-top: 60px;
+}
+
+.grid-container-photo1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-top: 25px;
+  padding-bottom: 20px;
+  margin-left: 13%;
+  margin-right: 13%;
+}
+
+@media screen and (max-width:900px) {
+  .grid-container{
+    grid-template-columns: 1fr;
+  }
+  .logos {
+      display: grid;
+      text-align: center;
+      margin-left: 5%;
+      margin-right: 5%
+  }
+  .text {
+      margin-right: 10px;
+      text-align: right;
+      padding-left: 10px;
+      padding-right: 10px;
+      font-size: .6rem;
+  }
+  .grid-container-photo {
+      display: grid;
+      grid-template-columns: 1fr;
+      text-align: center;
+      margin: auto;
+  }
+  .grid-container-photo1 {
+      display: grid;
+      grid-template-columns: 1fr;
+      text-align: center;
+      margin: auto;
+  }
+  .phototext {
+      margin-right: 10px;
+      text-align: right;
+      padding-left: 10px;
+      padding-right: 10px;
+      font-size: .6rem;
+  }
+  h2 {
+      font-size: 1rem;
+      margin-left: 5%;
+      margin-right: 5%
+  }
+  .intro p {
+      margin-left: 5%;
+      margin-right: 5%
+  }
+}
+
+/* Body Text Styling */
+
+h2 {
+  font-family: "Ms Madi", cursive;
+  font-style: normal;
+  margin-left: 13.5%;
+  padding-top: 60px;
+  font-size: 3.5rem;
+  color: #22223b;
+}
+
+.phototext {
+  text-align: center;
+  padding-bottom: 35px;
+}
+
+.phototext p {
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: regular;
+  font-style: normal;
+  font-size: 1rem;
+  margin-left: 20%;
+  margin-right: 20%;
+  border: hidden;
+  background-color: #e3d1cc;
+  padding-top: 13px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 13px;
+  color: #22223b;
+}
+
+.phototext h3 {
+  padding-bottom: 10px;
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1.2rem;
+  font-style: normal;
+  color: #22223b;
+}
+
+.intro p {
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: regular;
+  font-style: normal;
+  font-size: 1.1rem;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding-bottom: 20px;
+  color: #22223b;
+}
+
+/* Footer */
+
+  footer {
+    background: #4a4e69;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0px;
+    padding-top: 40px;
+  }
+  
+  .social {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .social li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  
+  .social img {
+    width: 25px;
+  }
+  
+  .socal img:hover {
+    opacity: 20%;
+  }
+
+  .social li {
+    background: #4a4e69;
+  }
+
+.btn {
+      font-family: "Nunito Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: regular;
+      font-style: normal;
+      font-size: 1rem;
+      background: #22223b;
+      color: rgb(251, 242, 243);
+      text-decoration: none;
+      border: hidden;
+      padding: 5px;
+  }
+  
+  .btn:hover {
+      font-family: "Nunito Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: regular;
+      font-style: normal;
+      font-size: 1rem;
+      background: #c9ada7;
+      color: #22223b;
+      text-decoration: none;
+      border: hidden;
+      padding: 5px;
+      opacity: 70%;
+  }
+
+footer p {
+      font-family: "Nunito Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: regular;
+      font-style: normal;
+      font-size: 1rem;
+}
+
+  @media screen and (min-width: 860px){
+    footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+}
+@media screen and (max-width: 859px){
+    footer {
+        text-align: center;
+        padding: 10px;
+    }
+  }
